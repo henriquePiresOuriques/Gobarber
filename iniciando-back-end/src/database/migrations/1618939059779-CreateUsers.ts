@@ -34,10 +34,26 @@ export default class CreateUsers1618939059779 implements MigrationInterface {
                         default: 'now()',
                     },
                     {
-                        name: 'updated_at',
-                        type: 'timestamp',
-                        default: 'now()',
-                    }
+                      name: 'rua',
+                      type: 'varchar',
+                  },
+                  {
+                      name: 'numero',
+                      type: 'varchar',
+
+                  },
+                  {
+                      name: 'bairro',
+                      type: 'varchar',
+                  },
+                  {
+                    name: 'complemento',
+                    type: 'varchar',
+                  },
+                  {
+                    name: 'referencia',
+                    type: 'varchar',
+                  }
                 ]
             })
         );

@@ -1,13 +1,15 @@
-import{ Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import{ Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToOne, JoinColumn } from 'typeorm';
+
+//import Appointment from './Appointment';
 
 @Entity('users')
 class User {
     @PrimaryGeneratedColumn('uuid')
     id: string;
-    
+
     @Column()
     name: string;
-    
+
     @Column()
     email: string;
 
@@ -15,13 +17,22 @@ class User {
     password: string;
 
     @Column()
-    avatar: string;
+    rua: string;
+
+    @Column()
+    numero: string;
+
+    @Column()
+    bairro: string;
+
+    @Column()
+    complemento: string;
+
+    @Column()
+    referencia: string;
 
     @CreateDateColumn()
     created_at: Date;
-
-    @UpdateDateColumn()
-    updated_at: Date;
 }
 
 export default User;
